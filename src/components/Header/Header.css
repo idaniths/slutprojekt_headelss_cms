@@ -1,0 +1,32 @@
+.page-header {
+  /* gradient backround color */
+  background: linear-gradient(
+    90deg,
+    rgba(89, 89, 89, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  height: 5rem;
+  width: 100%;
+}
+
+.home-header {
+  position: absolute;
+  background-color: transparent;
+  width: 100vw;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2rem;
+  height: 100%;
+}
+
+.list-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}

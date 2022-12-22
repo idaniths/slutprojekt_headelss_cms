@@ -1,0 +1,19 @@
+.singleproject-section {
+  display: flex;
+  gap: 2rem;
+
+  padding: 2rem 2rem;
+  /* height: 30rem; */
+}
+
+.singleproject-article {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  height: 50%;
+  background-color: rgb(37, 34, 34);
+}
+.singleproject-img {
+  height: 50%;
+  object-fit: contain;
+}

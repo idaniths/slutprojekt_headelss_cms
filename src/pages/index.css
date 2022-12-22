@@ -1,0 +1,37 @@
+.hero-image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+/* mobile version */
+
+@media screen and (max-width: 600px) {
+  .hero-text {
+    font-size: 20px;
+    top: 15%;
+    left: 40%;
+    transform: translate(-35%, -50%);
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero-text {
+    font-size: 12px;
+    top: 14%;
+    left: 40%;
+    transform: translate(-35%, -50%);
+  }
+  .hero-image {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
