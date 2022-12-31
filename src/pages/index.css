@@ -1,16 +1,19 @@
 .hero-image {
   max-width: 100%;
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-text {
-  position: absolute;
+  /* position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 400;
+  margin-bottom: 25rem;
 }
 
 /* mobile version */
@@ -18,7 +21,7 @@
 @media screen and (max-width: 600px) {
   .hero-text {
     font-size: 20px;
-    top: 15%;
+    top: 20%;
     left: 40%;
     transform: translate(-35%, -50%);
   }
@@ -26,12 +29,8 @@
 @media screen and (max-width: 400px) {
   .hero-text {
     font-size: 12px;
-    top: 14%;
+    top: 22%;
     left: 40%;
     transform: translate(-35%, -50%);
-  }
-  .hero-image {
-    max-width: 100%;
-    object-fit: contain;
   }
 }

@@ -6,10 +6,10 @@ import ProjectList from "../../components/ProjectList/ProjectList";
 const Projects = ({ data }) => {
   const projects = data.allContentfulProject.edges;
   return (
-    <article>
+    <main>
       <Header />
       <ProjectList projects={projects} />
-    </article>
+    </main>
   );
 };
 

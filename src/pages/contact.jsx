@@ -1,19 +1,19 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Header from "../components/Header/Header";
 
-const AboutPage = ({ data }) => {
-  const about = data.contentfulPage;
+const contactPage = ({ data }) => {
+  const contact = data.contentfulPage;
   return (
     <article>
       <Header />
-      <h1>{about.title}</h1>
-      <p>{about.body}</p>
+      <h1>{contact.title}</h1>
+      <p>{contact.body}</p>
     </article>
   );
 };
 
-export default AboutPage;
+export default contactPage;
 
 export const Head = () => <title>About</title>;
 
