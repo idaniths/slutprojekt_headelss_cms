@@ -14,11 +14,11 @@ const Header = ({ home }) => {
     setIsActive((current) => !current);
   };
 
-  const handleClickOutside = (event) => {
-    if (event.target.classList.contains("list-menu")) {
-      setIsActive(false);
-    }
-  };
+  //   const handleClickOutside = (event) => {
+  //     if (event.target.classList.contains("list-menu")) {
+  //       setIsActive(false);
+  //     }
+  //   };
 
   const [width, setWidth] = useState(window.innerWidth);
 

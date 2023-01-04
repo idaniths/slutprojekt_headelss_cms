@@ -5,6 +5,7 @@ import ProjectList from "../../components/ProjectList/ProjectList";
 
 const Projects = ({ data }) => {
   const projects = data.allContentfulProject.edges;
+
   return (
     <main>
       <Header />
@@ -23,6 +24,7 @@ export const projectPageQuery = graphql`
     allContentfulProject {
       edges {
         node {
+          category
           title
           createdAt
           slug
