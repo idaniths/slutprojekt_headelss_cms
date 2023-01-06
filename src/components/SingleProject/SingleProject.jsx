@@ -17,8 +17,8 @@ const SingleProject = ({ project }) => {
                 />
               );
             })}
-            <h1 className="singleproject-h1">{project.title}</h1>
-            <p className="singleproject-decription">{project.description}</p>
+            <h1>{project.title}</h1>
+            <p>{project.description}</p>
           </article>
         </section>
       </main>

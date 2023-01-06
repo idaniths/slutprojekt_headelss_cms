@@ -38,6 +38,16 @@ const ProjectList = ({ projects }) => {
     }
   }, [category]);
 
+  // this fuction will reset the project list to all projects when the category is set to all
+
+  useEffect(() => {
+    if (category === "all") {
+      setProjectList(projects);
+    }
+  }, [category]);
+
+  // this function will sort the projects by date
+
   projectList.sort((a, b) => {
     return new Date(a.node.createdAt) - new Date(b.node.createdAt);
   });
@@ -46,7 +56,7 @@ const ProjectList = ({ projects }) => {
     <>
       <main className="project-list-main">
         <h1>Projects</h1>
-        <p>Category</p>
+
         <select
           name="category"
           id="category"
@@ -54,6 +64,7 @@ const ProjectList = ({ projects }) => {
             setCategory(e.target.value);
           }}
         >
+          <option value="all">All projects</option>
           {categories.map((cat) => {
             return <option value={cat}>{cat}</option>;
           })}

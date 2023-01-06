@@ -7,10 +7,12 @@ const Projects = ({ data }) => {
   const projects = data.allContentfulProject.edges;
 
   return (
-    <main>
-      <Header />
-      <ProjectList projects={projects} />
-    </main>
+    <>
+      <main>
+        <Header />
+        <ProjectList projects={projects} />
+      </main>
+    </>
   );
 };
 

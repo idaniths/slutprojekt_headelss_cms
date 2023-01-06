@@ -8,4 +8,15 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+    to left bottom,
+    #c2d7e1,
+    #9ab9c8,
+    #739bb0,
+    #4b7f99,
+    #186383
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
