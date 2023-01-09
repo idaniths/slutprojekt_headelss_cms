@@ -1,15 +1,21 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Header from "../components/Header/Header";
+import "./about-and-contact.css";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
   return (
-    <article>
+    <>
       <Header />
-      <h1>{about.title}</h1>
-      <p>{about.body}</p>
-    </article>
+      <main className="about-and-contact-main">
+        <h1>{about.title}</h1>
+        <article className="about-and-contact-article">
+          <div>{renderRichText(about.bodyText)}</div>
+        </article>
+      </main>
+    </>
   );
 };
 
@@ -23,7 +29,9 @@ export const aboutPageQuery = graphql`
     contentfulPage(path: { eq: "/about" }) {
       title
       path
-      body
+      bodyText {
+        raw
+      }
     }
   }
 `;

@@ -73,18 +73,18 @@ const ProjectList = ({ projects }) => {
         <section className="project-list">
           {projectList.map((project) => {
             return (
-              <article
-                className="project-list-item"
-                key={project.node.contentful_id}
-              >
-                <img
-                  src={project.node.screenshot[0].file.url}
-                  alt={project.node.title}
-                />
-                <Link to={`/projects/${project.node.slug}`}>
+              <Link to={`/projects/${project.node.slug}`}>
+                <article
+                  className="project-list-item"
+                  key={project.node.contentful_id}
+                >
+                  <img
+                    src={project.node.screenshot[0].file.url}
+                    alt={project.node.title}
+                  />
                   <h2>{project.node.title}</h2>
-                </Link>
-              </article>
+                </article>
+              </Link>
             );
           })}
         </section>

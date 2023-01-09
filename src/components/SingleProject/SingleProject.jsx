@@ -7,6 +7,7 @@ const SingleProject = ({ project }) => {
     <>
       <main className="singleproject-main">
         <section className="singleproject-section">
+          <h1>{project.title}</h1>
           <article className="singleproject-article">
             {project.screenshot.map((screenshot) => {
               return (
@@ -17,7 +18,7 @@ const SingleProject = ({ project }) => {
                 />
               );
             })}
-            <h1>{project.title}</h1>
+            <h2>{project.title}</h2>
             <p>{project.description}</p>
           </article>
         </section>

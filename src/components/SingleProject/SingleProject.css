@@ -3,8 +3,11 @@
   flex-direction: column;
   gap: 2rem;
 
-  padding: 1rem 1rem;
+  padding: 5rem 10rem 5rem 10rem;
   /* height: 30rem; */
+}
+.singleproject-section h1 {
+  text-align: center;
 }
 
 .singleproject-article {
@@ -27,4 +30,12 @@
   height: 50%;
   object-fit: contain;
   padding-bottom: 1rem;
+}
+
+/* mobile version  */
+
+@media (max-width: 600px) {
+  .singleproject-section {
+    padding: 2rem 1rem 4rem 1rem;
+  }
 }

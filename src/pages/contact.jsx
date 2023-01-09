@@ -1,29 +1,37 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Header from "../components/Header/Header";
+import "./about-and-contact.css";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const contactPage = ({ data }) => {
-  const contact = data.contentfulPage;
+const Contactage = ({ data }) => {
+  const about = data.contentfulPage;
   return (
-    <article>
+    <>
       <Header />
-      <h1>{contact.title}</h1>
-      <p>{contact.body}</p>
-    </article>
+      <main className="about-and-contact-main">
+        <h1>{about.title}</h1>
+        <article className="about-and-contact-article">
+          <div>{renderRichText(about.bodyText)}</div>
+        </article>
+      </main>
+    </>
   );
 };
 
-export default contactPage;
+export default Contactage;
 
-export const Head = () => <title>About</title>;
+export const Head = () => <title>Contact</title>;
 
 // graphql query
 export const aboutPageQuery = graphql`
-  query aboutQuery {
+  query contactQuery {
     contentfulPage(path: { eq: "/contact" }) {
       title
       path
-      body
+      bodyText {
+        raw
+      }
     }
   }
 `;
