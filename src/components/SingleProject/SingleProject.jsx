@@ -1,6 +1,7 @@
 import React from "react";
 import "./SingleProject.css";
 import "../../styles/global.css";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const SingleProject = ({ project }) => {
   return (
@@ -19,7 +20,9 @@ const SingleProject = ({ project }) => {
               );
             })}
             <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            {/* <p>{project.description}</p> */}
+            <div>{renderRichText(project.bodyText)}</div>
+            <a href={project.siteUrl}>Link to page</a>
           </article>
         </section>
       </main>

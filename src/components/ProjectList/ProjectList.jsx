@@ -19,6 +19,8 @@ const ProjectList = ({ projects }) => {
     });
     // flat will remove the nested array
     setCategories(categories.flat());
+    // this will remove duplicates
+    setCategories([...new Set(categories.flat())]);
   };
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const ProjectList = ({ projects }) => {
     }
   }, [category]);
 
-  // this function will sort the projects by date
+  //this function will sort the projects by date
 
   projectList.sort((a, b) => {
     return new Date(a.node.createdAt) - new Date(b.node.createdAt);
@@ -65,6 +67,7 @@ const ProjectList = ({ projects }) => {
           }}
         >
           <option value="all">All projects</option>
+
           {categories.map((cat) => {
             return <option value={cat}>{cat}</option>;
           })}
@@ -83,6 +86,7 @@ const ProjectList = ({ projects }) => {
                     alt={project.node.title}
                   />
                   <h2>{project.node.title}</h2>
+                  <p>{project.node.description}</p>
                 </article>
               </Link>
             );

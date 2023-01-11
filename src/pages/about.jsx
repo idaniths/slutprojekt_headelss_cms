@@ -3,15 +3,29 @@ import { Link, graphql } from "gatsby";
 import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+// import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
+  // const options = {
+  //   renderMark: {
+  //     [MARKS.BOLD]: (text) => <b className="font-bold">{text}</b>,
+  //   },
+  //   renderNode: {
+  //     [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+  //   },
+  // };
   return (
     <>
       <Header />
       <main className="about-and-contact-main">
         <h1>{about.title}</h1>
         <article className="about-and-contact-article">
+          <img
+            className="profile-pic"
+            src={about.headerImage.file.url}
+            alt=""
+          />
           <div>{renderRichText(about.bodyText)}</div>
         </article>
       </main>
@@ -31,6 +45,11 @@ export const aboutPageQuery = graphql`
       path
       bodyText {
         raw
+      }
+      headerImage {
+        file {
+          url
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Header from "../../components/Header/Header";
 import ProjectList from "../../components/ProjectList/ProjectList";
 
@@ -39,5 +39,10 @@ export const projectPageQuery = graphql`
         }
       }
     }
+    # allContentfulCategory {
+    #   nodes {
+    #     categoryName
+    #   }
+    # }
   }
 `;

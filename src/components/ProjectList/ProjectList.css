@@ -1,6 +1,6 @@
 .project-list {
   gap: 2rem;
-  padding: 4rem 4rem;
+  padding: 2rem 4rem;
   color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -26,11 +26,18 @@
   background-color: rgb(37, 34, 34);
   max-width: 100%;
   align-self: center;
+  transition: all 0.1s 0s ease-in-out;
 }
 /* hover  */
 .project-list-item:hover {
   transform: scale(1.1);
-  transition: all 0.3s 0s ease-in-out;
+  transition: all 0.2s 0s ease-in-out;
+}
+.project-list-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
 }
 .project-list-item img {
   max-width: 100%;
@@ -54,7 +61,7 @@
 
 .project-list-main h2 {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
@@ -69,8 +76,9 @@
   background-color: rgb(37, 34, 34);
   color: rgb(255, 255, 255);
   margin-top: 3rem;
-  margin-left: 9.5%;
+  margin-left: 4.7%;
   align-self: flex-start;
+  border-color: rgb(37, 34, 34);
 }
 
 /* mobile version  */

@@ -62,12 +62,16 @@ export const query = graphql`
     contentfulProject(slug: { eq: $slug }) {
       title
       slug
+      bodyText {
+        raw
+      }
       screenshot {
         file {
           url
         }
       }
       description
+      siteUrl
       contentful_id
     }
   }
