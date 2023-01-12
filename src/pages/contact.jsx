@@ -11,7 +11,7 @@ const Contactage = ({ data }) => {
       <Header />
       <main className="about-and-contact-main">
         <h1>{about.title}</h1>
-        <article className="about-and-contact-article">
+        <article className="about-and-contact-section">
           <div>{renderRichText(about.bodyText)}</div>
         </article>
       </main>

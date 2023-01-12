@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
@@ -7,27 +7,42 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
-  // const options = {
-  //   renderMark: {
-  //     [MARKS.BOLD]: (text) => <b className="font-bold">{text}</b>,
-  //   },
-  //   renderNode: {
-  //     [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-  //   },
-  // };
+  const education = data.allContentfulEducation.nodes;
+
   return (
     <>
       <Header />
       <main className="about-and-contact-main">
         <h1>{about.title}</h1>
-        <article className="about-and-contact-article">
+        <section className="about-and-contact-section">
+          <article className="about-and-contact-article">
+            <h2>About me</h2>
+            <div>{renderRichText(about.bodyText)}</div>
+          </article>
           <img
             className="profile-pic"
             src={about.headerImage.file.url}
             alt=""
           />
-          <div>{renderRichText(about.bodyText)}</div>
-        </article>
+
+          <article className="education">
+            <h2>Education</h2>
+            {education.map((education) => {
+              return (
+                <div>
+                  <h3>{education.title}</h3>
+                  <h4>{education.subtitle}</h4>
+                  <p>
+                    {education.beginning} - {education.end}
+                  </p>
+                </div>
+              );
+            })}
+          </article>
+          <article className="experience">
+            <h2>Expereince</h2>
+          </article>
+        </section>
       </main>
     </>
   );
@@ -50,6 +65,14 @@ export const aboutPageQuery = graphql`
         file {
           url
         }
+      }
+    }
+    allContentfulEducation {
+      nodes {
+        title
+        subtitle
+        beginning
+        end
       }
     }
   }
