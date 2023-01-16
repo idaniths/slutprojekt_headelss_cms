@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const Header = ({ home }) => {
   const [isActive, setIsActive] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth || 599);
+  const [width, setWidth] = useState();
 
   // this function will toggle the menu when the hamburger is clicked
 
@@ -28,7 +28,7 @@ const Header = ({ home }) => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  }, [window.innerWidth]);
 
   const isMobile = width <= 600;
 
