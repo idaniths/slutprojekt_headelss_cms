@@ -22,7 +22,7 @@ export const Head = () => <title>Projects</title>;
 
 // graphql query
 export const projectPageQuery = graphql`
-  query MyQuery {
+  query {
     allContentfulProject {
       edges {
         node {
@@ -39,10 +39,5 @@ export const projectPageQuery = graphql`
         }
       }
     }
-    # allContentfulCategory {
-    #   nodes {
-    #     categoryName
-    #   }
-    # }
   }
 `;

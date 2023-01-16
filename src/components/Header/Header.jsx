@@ -21,6 +21,7 @@ const Header = ({ home }) => {
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
+    console.log("window.innerWidth", window.innerWidth);
   }
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
@@ -62,7 +63,6 @@ const Header = ({ home }) => {
 
           <nav
             className="list-menu"
-            // onClick={handleClickOutside}
             style={{
               display: isActive ? "block" : "none",
             }}
@@ -82,7 +82,6 @@ const Header = ({ home }) => {
       ) : (
         <nav
           className="list-menu"
-          //   onClick={handleClickOutside}
           style={{
             display: "block",
           }}
@@ -100,7 +99,6 @@ const Header = ({ home }) => {
         <header className="page-header">
           <nav
             className="list-menu"
-            // onClick={handleClickOutside}
             style={{
               display: isActive ? "block" : "none",
             }}

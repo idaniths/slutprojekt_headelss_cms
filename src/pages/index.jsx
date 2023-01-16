@@ -8,8 +8,9 @@ import Footer from "../components/Footer/Footer";
 
 const HomePage = ({ data }) => {
   const homePage = data.allContentfulHomePage.edges[0].node;
-
   const [width, setWidth] = useState(window.innerWidth);
+
+  // this function will toggle the menu when the hamburger is clicked
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);

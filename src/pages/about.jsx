@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-// import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
