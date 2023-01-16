@@ -12,6 +12,7 @@ const NotFoundPage = () => {
           justifyContent: "center",
           height: "100vh",
           backgroundColor: "rgb(37, 34, 34)",
+          margin: "0",
         }}
       >
         <h1
