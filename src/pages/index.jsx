@@ -5,6 +5,7 @@ import "./index.css";
 import "../styles/global.css";
 import Footer from "../components/Footer/Footer";
 import { useMediaQuery } from "react-responsive";
+import { SEO } from "../components/seo";
 
 const HomePage = ({ data }) => {
   const homePage = data.allContentfulHomePage.edges[0].node;
@@ -59,7 +60,7 @@ const HomePage = ({ data }) => {
 
 export default HomePage;
 
-export const Head = () => <title>Home page</title>;
+export const Head = () => <SEO />;
 
 // page query
 export const pageQuery = graphql`
