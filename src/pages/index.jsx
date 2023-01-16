@@ -3,26 +3,12 @@ import Header from "../components/Header/Header";
 import { graphql } from "gatsby";
 import "./index.css";
 import "../styles/global.css";
-import { useState, useEffect } from "react";
 import Footer from "../components/Footer/Footer";
+import { useMediaQuery } from "react-responsive";
 
 const HomePage = ({ data }) => {
   const homePage = data.allContentfulHomePage.edges[0].node;
-  const [width, setWidth] = useState(window.innerWidth);
-
-  // this function will toggle the menu when the hamburger is clicked
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 600;
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
     <>

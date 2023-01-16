@@ -5,32 +5,17 @@ import "./Header.css";
 import "../../styles/global.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Header = ({ home }) => {
   const [isActive, setIsActive] = useState(false);
-  const [width, setWidth] = useState();
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
-  // this function will toggle the menu when the hamburger is clicked
-
+  // this is the function that will be called when the user clicks on the hamburger menu
   const handleClick = () => {
     // 👇️ toggle
-    setIsActive((current) => !current);
+    setIsActive(!isActive);
   };
-
-  // this function will close the menu when a link is clicked
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-    console.log("window.innerWidth", window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, [window.innerWidth]);
-
-  const isMobile = width <= 600;
 
   const data = useStaticQuery(graphql`
     query {
