@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const Header = ({ home }) => {
   const [isActive, setIsActive] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth || 599);
 
   // this function will toggle the menu when the hamburger is clicked
 
