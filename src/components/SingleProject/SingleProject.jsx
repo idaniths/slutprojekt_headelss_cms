@@ -7,9 +7,12 @@ const SingleProject = ({ project }) => {
   return (
     <>
       <main className="singleproject-main">
+        {/* <h1>{project.title}</h1> */}
         <section className="singleproject-section">
-          <h1>{project.title}</h1>
           <article className="singleproject-article">
+            <h2>{project.title}</h2>
+            <div>{renderRichText(project.bodyText)}</div>
+            <a href={project.siteUrl}>Link to page</a>
             {project.screenshot.map((screenshot) => {
               return (
                 <img
@@ -19,10 +22,6 @@ const SingleProject = ({ project }) => {
                 />
               );
             })}
-            <h2>{project.title}</h2>
-            {/* <p>{project.description}</p> */}
-            <div>{renderRichText(project.bodyText)}</div>
-            <a href={project.siteUrl}>Link to page</a>
           </article>
         </section>
       </main>

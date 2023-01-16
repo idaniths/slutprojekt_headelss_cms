@@ -26,8 +26,8 @@
   max-width: 100%;
   align-self: center;
   transition: all 0.1s 0s ease-in-out;
+  border-radius: 3px;
 }
-/* hover  */
 .project-list-item:hover {
   transform: scale(1.1);
   transition: all 0.2s 0s ease-in-out;
@@ -92,6 +92,7 @@
   margin-left: 4.7%;
   align-self: flex-start;
   border-color: rgb(37, 34, 34);
+  border-radius: 3px;
 }
 
 /* mobile version  */
@@ -117,13 +118,11 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem;
-    /* height: 20rem; */
     background-color: rgb(37, 34, 34);
     margin: 0;
     height: auto;
   }
   .project-list-item img {
-    /* height: 80%; */
     object-fit: contain;
   }
   .project-list-main h1 {

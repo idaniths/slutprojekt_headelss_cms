@@ -8,19 +8,16 @@ import { useEffect } from "react";
 
 const Header = ({ home }) => {
   const [isActive, setIsActive] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // this function will toggle the menu when the hamburger is clicked
 
   const handleClick = () => {
     // 👇️ toggle
     setIsActive((current) => !current);
   };
 
-  //   const handleClickOutside = (event) => {
-  //     if (event.target.classList.contains("list-menu")) {
-  //       setIsActive(false);
-  //     }
-  //   };
-
-  const [width, setWidth] = useState(window.innerWidth);
+  // this function will close the menu when a link is clicked
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);

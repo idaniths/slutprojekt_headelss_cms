@@ -6,31 +6,32 @@
 }
 
 .hero-text {
-  /* position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   color: white;
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 25rem;
 }
-
+.footer {
+  position: absolute;
+  padding-left: 1rem;
+  bottom: 0;
+  left: 0;
+  height: 2rem;
+  color: white;
+  font-size: 16px;
+}
 /* mobile version */
 
 @media screen and (max-width: 600px) {
   .hero-text {
     font-size: 20px;
-    /* top: 20%;
-    left: 40%;
-    transform: translate(-35%, -50%); */
   }
 }
 @media screen and (max-width: 400px) {
   .hero-text {
     font-size: 16px;
-    /* top: 22%;
-    left: 40%;
-    transform: translate(-50%, -50%); */
+  }
+  .footer {
+    font-size: 12px;
   }
 }

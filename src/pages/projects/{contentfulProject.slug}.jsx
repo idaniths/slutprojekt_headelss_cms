@@ -6,8 +6,9 @@ import { useState, useEffect } from "react";
 
 const ProjectPage = ({ data }) => {
   const project = data.contentfulProject;
-
   const [width, setWidth] = useState(window.innerWidth);
+
+  // this function will toggle the menu when the hamburger is clicked
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);

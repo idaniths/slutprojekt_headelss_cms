@@ -1,7 +1,6 @@
 .about-and-contact-main {
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
   color: rgb(255, 255, 255);
 }
 .about-and-contact-main h1 {
@@ -35,15 +34,15 @@
   font-size: 16px;
 }
 .about-and-contact-article h2 {
-  align-self: center;
+  /* align-self: center; */
   margin-bottom: 12%;
 }
 
 .profile-pic {
-  max-width: 70%;
+  max-width: 60%;
   border-radius: 50%;
-  margin-left: 20%;
-  margin-top: 5%;
+  margin-left: 30%;
+  margin-top: 2%;
 }
 .education {
   display: flex;
@@ -52,7 +51,6 @@
   align-items: flex-start;
 }
 .education h2 {
-  align-self: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -74,10 +72,38 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.experience h2 {
-  align-self: center;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+
+.contact-article {
+  padding: 2rem 4rem 2rem 4rem;
+  margin: 5% 15%;
+  height: 50%;
+  background-color: rgb(37, 34, 34);
+  color: white;
+}
+.contact-article div p {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  color: rgb(202, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 1rem;
+}
+.links:hover {
+  color: rgb(255, 255, 255);
+}
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* mobile version */
@@ -113,5 +139,18 @@
     border-radius: 50%;
     margin-top: 2rem;
     margin-left: 0;
+  }
+  .about-and-contact-article h2 {
+    align-self: center;
+  }
+  .education h2 {
+    align-self: center;
+  }
+  .contact-article {
+    padding: 2rem;
+    margin: 5% 15%;
+    height: 50%;
+    background-color: rgb(37, 34, 34);
+    color: white;
   }
 }

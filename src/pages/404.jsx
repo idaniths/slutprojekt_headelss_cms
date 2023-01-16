@@ -15,7 +15,6 @@ const NotFoundPage = () => {
       <h1
         style={{
           fontSize: "8rem",
-          // gradient font color
           background: "linear-gradient(80deg, #ee0000 0%, #ff8c00 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",

@@ -8,6 +8,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
   const education = data.allContentfulEducation.nodes;
+  const experience = data.allContentfulExperience.nodes;
 
   return (
     <>
@@ -39,8 +40,19 @@ const AboutPage = ({ data }) => {
               );
             })}
           </article>
-          <article className="experience">
+          <article className="education">
             <h2>Expereince</h2>
+            {experience.map((experience) => {
+              return (
+                <div>
+                  <h3>{experience.title}</h3>
+                  <h4>{experience.subtitle}</h4>
+                  <p>
+                    {experience.beginning} - {experience.end}
+                  </p>
+                </div>
+              );
+            })}
           </article>
         </section>
       </main>
@@ -68,6 +80,14 @@ export const aboutPageQuery = graphql`
       }
     }
     allContentfulEducation {
+      nodes {
+        title
+        subtitle
+        beginning
+        end
+      }
+    }
+    allContentfulExperience {
       nodes {
         title
         subtitle

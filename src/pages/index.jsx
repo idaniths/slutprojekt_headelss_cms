@@ -42,8 +42,8 @@ const HomePage = ({ data }) => {
               <h1>{homePage.welcomemessage}</h1>
               <p>{homePage.paragraph}</p>
             </div>
+            <Footer className="footer" />
           </div>
-          <Footer />
         </main>
       ) : (
         <main>
@@ -63,7 +63,7 @@ const HomePage = ({ data }) => {
               <p>{homePage.paragraph}</p>
             </div>
           </div>
-          <Footer />
+          <Footer className="footer" />
         </main>
       )}
     </>

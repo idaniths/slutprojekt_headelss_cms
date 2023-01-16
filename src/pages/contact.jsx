@@ -4,22 +4,30 @@ import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
-const Contactage = ({ data }) => {
+const ContactPage = ({ data }) => {
   const about = data.contentfulPage;
   return (
     <>
       <Header />
       <main className="about-and-contact-main">
         <h1>{about.title}</h1>
-        <article className="about-and-contact-section">
+        <article className="contact-article">
           <div>{renderRichText(about.bodyText)}</div>
+          <div className="contact-links">
+            <Link className="links" to={about.link}>
+              LinkedIn
+            </Link>
+            <Link className="links" to={about.link2}>
+              Github
+            </Link>
+          </div>
         </article>
       </main>
     </>
   );
 };
 
-export default Contactage;
+export default ContactPage;
 
 export const Head = () => <title>Contact</title>;
 
@@ -32,6 +40,8 @@ export const aboutPageQuery = graphql`
       bodyText {
         raw
       }
+      link
+      link2
     }
   }
 `;
