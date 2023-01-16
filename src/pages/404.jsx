@@ -10,6 +10,7 @@ const NotFoundPage = () => {
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
+        backgroundColor: "rgb(37, 34, 34)",
       }}
     >
       <h1
@@ -22,11 +23,11 @@ const NotFoundPage = () => {
       >
         404
       </h1>
-      <h1>Page not found</h1>
+      <h1 style={{ color: "white" }}>Page not found</h1>
       <Link
         to="/"
         style={{
-          color: "black",
+          color: "rgb(202, 0, 0)",
           textDecoration: "none",
           fontSize: "1.8rem",
           marginTop: "1rem",
