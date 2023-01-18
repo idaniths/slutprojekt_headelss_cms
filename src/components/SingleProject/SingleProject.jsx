@@ -7,7 +7,6 @@ const SingleProject = ({ project }) => {
   return (
     <>
       <main className="singleproject-main">
-        {/* <h1>{project.title}</h1> */}
         <section className="singleproject-section">
           <article className="singleproject-article">
             <h2>{project.title}</h2>

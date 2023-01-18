@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { SEO } from "../components/seo";
 
 const ContactPage = ({ data }) => {
   const about = data.contentfulPage;
@@ -29,7 +30,7 @@ const ContactPage = ({ data }) => {
 
 export default ContactPage;
 
-export const Head = () => <title>Contact</title>;
+export const Head = () => <SEO title="contact" />;
 
 // graphql query
 export const aboutPageQuery = graphql`

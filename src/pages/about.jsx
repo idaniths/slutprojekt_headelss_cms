@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Header from "../components/Header/Header";
 import "./about-and-contact.css";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { SEO } from "../components/seo";
 
 const AboutPage = ({ data }) => {
   const about = data.contentfulPage;
@@ -22,7 +23,7 @@ const AboutPage = ({ data }) => {
           <img
             className="profile-pic"
             src={about.headerImage.file.url}
-            alt=""
+            alt="Profile picture"
           />
 
           <article className="education">
@@ -61,7 +62,7 @@ const AboutPage = ({ data }) => {
 
 export default AboutPage;
 
-export const Head = () => <title>About</title>;
+export const Head = () => <SEO title="about" />;
 
 // graphql query
 export const aboutPageQuery = graphql`

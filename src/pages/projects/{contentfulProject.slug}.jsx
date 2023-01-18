@@ -2,8 +2,8 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Header from "../../components/Header/Header";
 import SingleProject from "../../components/SingleProject/SingleProject";
-import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { SEO } from "../../components/seo";
 
 const ProjectPage = ({ data }) => {
   const project = data.contentfulProject;
@@ -66,4 +66,4 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <title>Project</title>;
+export const Head = () => <SEO title="single project" />;

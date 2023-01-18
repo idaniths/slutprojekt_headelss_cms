@@ -4,16 +4,14 @@ import { useStaticQuery } from "gatsby";
 import "./Header.css";
 import "../../styles/global.css";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const Header = ({ home }) => {
   const [isActive, setIsActive] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
-  // this is the function that will be called when the user clicks on the hamburger menu
+  // this is the function will be called when the user clicks on the hamburger menu
   const handleClick = () => {
-    // 👇️ toggle
     setIsActive(!isActive);
   };
 
