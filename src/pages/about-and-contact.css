@@ -49,6 +49,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  border-left: 1px solid rgb(255, 255, 255);
+  padding-left: 1rem;
 }
 .education h2 {
   margin-top: 3rem;
@@ -142,6 +144,9 @@
   }
   .about-and-contact-article h2 {
     align-self: center;
+  }
+  .education {
+    border: none;
   }
   .education h2 {
     align-self: center;
