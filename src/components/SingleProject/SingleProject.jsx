@@ -13,6 +13,7 @@ const SingleProject = ({ project }) => {
             <h2>{project.title}</h2>
             <div>{renderRichText(project.bodyText)}</div>
             <a href={project.siteUrl}>Link to page</a>
+            <a href={project.githubUrl}>Github</a>
             {project.screenshot.map((screenshot) => {
               return (
                 <img

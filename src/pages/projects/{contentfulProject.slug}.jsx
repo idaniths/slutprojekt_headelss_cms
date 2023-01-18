@@ -60,6 +60,7 @@ export const query = graphql`
       }
       description
       siteUrl
+      githubUrl
       contentful_id
     }
   }
